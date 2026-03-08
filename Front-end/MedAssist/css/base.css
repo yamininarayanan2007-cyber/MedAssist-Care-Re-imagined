@@ -1,0 +1,92 @@
+
+:root {
+  /* Brand Colors */
+  --green:      #00a86b;
+  --green-d:    #007a4d;
+  --green-bg:   #e6f9f2;
+  --teal:       #00b8c4;
+  --teal-bg:    #e0f8fa;
+  --amber:      #ff8c00;
+  --amber-bg:   #fff3e0;
+  --red:        #f43f5e;
+  --red-bg:     #ffeef1;
+  --blue:       #2979ff;
+  --blue-bg:    #e8f0ff;
+  --purple:     #7c3aed;
+  --purple-bg:  #f0ebff;
+  --sky:        #0ea5e9;
+  --sky-bg:     #e0f5ff;
+  --rose:       #e11d84;
+  --rose-bg:    #fce8f4;
+  --slate:      #475569;
+  --slate-bg:   #f0f4f8;
+  --olive:      #5a7a1a;
+  --olive-bg:   #edf5e0;
+
+  /* UI */
+  --bg:         #f8fafc;
+  --card:       #ffffff;
+  --text:       #0f1923;
+  --sub:        #64748b;
+  --border:     #e2e8f0;
+  --radius:     18px;
+  --shadow:     0 4px 24px rgba(0,0,0,0.07);
+  --shadow-lg:  0 12px 40px rgba(0,0,0,0.13);
+}
+
+/* ── Reset ── */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 { font-family: 'Fraunces', serif; }
+input, textarea, select, button { font-family: inherit; }
+button { cursor: pointer; }
+
+/* ── SPA Page Transitions ── */
+.page { display: none; min-height: 100vh; }
+.page.active {
+  display: block;
+  animation: fadeUp 0.35s ease;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* ── Shared Layout ── */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 28px 24px 100px;
+}
+
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+
+@media (max-width: 640px) {
+  .grid-2,
+  .grid-3 { grid-template-columns: 1fr; }
+}
+
+.divider {
+  border: none;
+  border-top: 1.5px solid var(--border);
+  margin: 20px 0;
+}
+
+/* ── Scroll utilities ── */
+.scroll-x {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.scroll-x::-webkit-scrollbar { display: none; }
