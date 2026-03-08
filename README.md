@@ -61,12 +61,3 @@ The goal of this project is to develop a system that can support health workers 
 
 ---
 
-## Tools Used
-
-* ChatGPT – Assistance for documentation and content generation
-* GitHub – Project repository and version control
-* PowerPoint – Project presentation
-* Microsoft Word – Project documentation
-
----
-
