@@ -34,7 +34,7 @@ This system is intended to support **early health assessment**, especially in ar
 
 The following project materials are available in this repository:
 
-* **Project Documentation (.docx)** – Detailed explanation of the system
+
 * **Project Presentation (.ppt)** – Slides used for project presentation
 * **Demo Video** – Demonstration of how the chatbot works
 
